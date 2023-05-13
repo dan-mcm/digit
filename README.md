@@ -24,6 +24,14 @@ npm install
 npm run start
 ```
 
+### Endpoints
+
+```
+/home # landing page - create player
+/leaderboard # retrieves leaderboard
+/battles # handles user battle submissions / battle processor
+```
+
 ## Server
 Bootstrapped from express.
 
@@ -31,4 +39,16 @@ Bootstrapped from express.
 cd server
 npm install
 npm run start
+```
+
+### Environmental Variables
+As the express server calls the DB this is configured via a .env file to mimic production safety. You will need to create a .env file within the server directory and pass in the following varialbes:
+
+```
+# staging/dev test values
+DB_USER=""
+DB_PASSWORD=""
+DB_HOST=""
+DB_NAME=""
+DB_PORT=""
 ```
