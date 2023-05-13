@@ -1,0 +1,13 @@
+services:
+  postgres:
+    container_name: digit
+    image: postgres:12.1-alpine
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: dbuser
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: digit
+    volumes:
+      # copy the sql script to create tables
+      - ./dbsetup.sql:/docker-entrypoint-initdb.d/dbsetup.sql
