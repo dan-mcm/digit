@@ -12,6 +12,5 @@ CREATE TABLE IF NOT EXISTS players(
 CREATE TABLE IF NOT EXISTS leaderboard(
     id SERIAL PRIMARY KEY,
     player_id INT REFERENCES players(id),
-    current_rank INT,
     score INT
 );

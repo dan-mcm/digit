@@ -13,6 +13,11 @@ cd db-setup
 docker-compose up -d
 # exec into container
 docker exec -it digit psql -U dbuser digit
+
+# useful command to random enter existing user to leaderboard
+INSERT INTO leaderboard (player_id, score)
+SELECT id, 0, floor(random() * 10000) + 1
+FROM players;
 ```
 
 ## Client

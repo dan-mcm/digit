@@ -43,7 +43,7 @@ export default function Home(props) {
 
     return (
         <div>
-            <h1>Basic Landing Page Title</h1>
+            <h1>Home</h1>
             <p>Welcome to Gamesite! Create a new account below.</p>
             <hr />
             <h2>Account Creation</h2>

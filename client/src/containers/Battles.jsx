@@ -8,7 +8,7 @@ export default class Battles extends Component {
     render() {
         return (
             <div>
-                <h1>Battles Title</h1>
+                <h1>Battles</h1>
             </div>
         )
     }

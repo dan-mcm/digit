@@ -33,7 +33,14 @@ app.post('/players/create', (req, res) => {
 
 // get leaderboard table
 app.get('/leaderboard', (req, res) => {
-    res.send('Leaderboard Endpoint')
+    const pool = DB.createPool();
+    const leaderboard = DB.getLeaderboard(pool)
+
+    leaderboard
+    .then(result => {
+        res.send(result)
+    })
+    .catch( err => res.send(err))
 })
 
 
